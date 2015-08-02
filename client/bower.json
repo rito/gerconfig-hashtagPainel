@@ -1,0 +1,14 @@
+{
+  "name": "gerenciador-de-config-angular-client-side",
+  "private": true,
+  "version": "0.0.1",
+  "description": "versao inicial do gerenciador de Configs",
+  "license": "private",
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-loader": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "html5-boilerplate": "~5.2.0"
+  }
+}

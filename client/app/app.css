@@ -1,0 +1,52 @@
+/* app css stylesheet */
+
+body {
+  width: 600px;
+  margin: 0 auto;
+}
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+table tr td,
+table tr th
+{
+  border: 1px solid #000;
+  border-collapse: collapse;
+  padding: 1em;
+}
+table tr th {
+  border: 1px solid #fff;
+  border-bottom: 1px solid #000;
+}
+
+.form-label-text {
+  width: 100px;
+  display: inline-block;
+}
+
