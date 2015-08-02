@@ -1,10 +1,6 @@
 'use strict';
 
-angular.module('myApp.Beers', [
-  'ngRoute'
-, 'myApp.Beers.Controllers'
-// , 'myApp.Beers.Service'
-])
+angular.module('myApp.Beers', ['ngRoute', 'myApp.Beers.Controllers'])
 .config(['$routeProvider', beersConfig]);
 
 // Config

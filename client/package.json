@@ -1,9 +1,10 @@
 {
-  "name": "gerenciador-de-config-angular-client-side",
+  "name": "angular-seed",
   "private": true,
-  "version": "0.0.1",
-  "description": "versao inicial do gerenciador de Configs",
-  "license": "private",
+  "version": "0.0.0",
+  "description": "A starter project for AngularJS",
+  "repository": "https://github.com/angular/angular-seed",
+  "license": "MIT",
   "devDependencies": {
     "bower": "^1.3.1",
     "http-server": "^0.6.1",
