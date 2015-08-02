@@ -50,3 +50,7 @@ table tr th {
   display: inline-block;
 }
 
+.rodape {
+  padding: 50px;
+  text-align: center;
+}

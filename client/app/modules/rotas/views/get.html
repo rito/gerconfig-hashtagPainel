@@ -1,0 +1,127 @@
+<h2>Exibição de Rotas</h2>
+<p class="msg">
+  {{ msg }}
+</p>
+
+<form name="rotaForm">
+
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">ID da Rota</span>
+      {{rota.id_rota}}
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Ação</span>
+      {{rota.acao}}
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Rota Principal</span>
+      {{rota.rota_principal}}
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Rota Pai</span>
+      {{rota.rota_pai}}
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Canal </span>
+      {{rota.canal}}
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Sistema </span>
+      {{rota.sistema}}
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Encapsula PS </span>
+      {{rota.encapsula_ps}}
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Menu Superior Pai </span>
+      {{rota.menu_superior_pai}}
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Menu Superior Filho </span>
+      {{rota.menu_superior_filho}}
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Menu Lateral Nivel 1 </span>
+      {{rota.menu_nivel1_lateral}}
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Menu Lateral Nivel 2 </span>
+      {{rota.menu_nivel2_lateral}}
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Menu Lateral Nivel 3 </span>
+      {{rota.menu_nivel3_lateral}}
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Miolo </span>
+      {{rota.miolo_aplicacao}}
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">API Categoria </span>
+      {{rota.api_categoria}}
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">API Subcategoria </span>
+      {{rota.api_subcategoria}}
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Sigla Pool </span>
+      {{rota.sigla_pool}}
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Caminho URL </span>
+      {{rota.caminho_url}}
+    </label>
+  </div>
+
+
+
+  <div class="form-group">
+    <a class="btn btn-large" href="#/rotas/{{rota._id}}/edit">Editar</a>
+    <!-- <button class="btn btn-large" data-ng-click="create(rota)">Incluir</button>-->
+  </div>
+  <div class="form-group">
+    <p class="msg">
+      {{ msg }}
+    </p>
+  </div>
+</form>

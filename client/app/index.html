@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Workshop Be MEAN - Aula Angular</title>
+  <title>Desativação EA</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
@@ -17,18 +17,25 @@
 </head>
 <body>
 
-  <h1>Workshop Be MEAN - Adega de Cervejas</h1>
+  <h1>Desativação EA</h1>
+  <!-- <ul class="menu">
+    <li><a href="#/beers">Listagem Beers (Modelo)</a></li>
+    <li><a href="#/beers/create">Cadastro Beers (Modelo)</a></li>
+  </ul> -->
   <ul class="menu">
-    <li><a href="#/beers">Listagem</a></li>
-    <li><a href="#/beers/create">Cadastro</a></li>
+    <li><a href="#/rotas">Listagem</a></li>
+    <li><a href="#/rotas/create">Cadastro</a></li>
   </ul>
-
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
   <div data-ng-view></div>
 
+ <div class="rodape">
+   <p>Sistema de Rotas e Configs - frente de Testes & Homologação</p>
+   <p>www.rito.com.br</p>
+ </div>
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
@@ -39,6 +46,10 @@
   <script src="view2/view2.js"></script>
   <script src="modules/beers/index.js"></script>
   <script src="modules/beers/controllers.js"></script>
+
+  <script src="modules/rotas/index.js"></script>
+  <script src="modules/rotas/controllers.js"></script>
+
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>

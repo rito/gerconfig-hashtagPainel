@@ -38,7 +38,12 @@ var api = {};
 api.beers = require('./modules/beers/routes/api');
 app.use('/api/beers', api.beers);
 
+api.rotas = require('./modules/rotas/routes/api');
+app.use('/api/rotas', api.rotas);
+
+
 app.use('/beers', require('./modules/beers/routes'));
+app.use('/rotas', require('./modules/rotas/routes'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
