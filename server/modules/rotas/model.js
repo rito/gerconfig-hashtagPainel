@@ -17,10 +17,10 @@ db.on('disconnected', function(err){
 
 var Schema = mongoose.Schema
   ,  _schema = {
-        id_rota: { type: Number, min: 0, default: '' }
+        id_rota: { type: String, required: true, index: {unique: true}, default: '' }
       , acao: { type: String, default: '' }
       , rota_principal: { type: Boolean, default: 'true'}
-      , rota_pai: { type: Number, min: 0, default: '' }
+      , rota_pai: { type: String, default: '' }
       , canal: { type: String, default: '' }
       , sistema: { type: String, default: '' }
       , encapsula_ps: { type: Boolean, default: 'true'}
@@ -83,7 +83,7 @@ var Schema = mongoose.Schema
           , grupo_mapa_site: { type: String, default: '' }
           , subgrupo1_mapa_site: { type: String, default: '' }
           , fluxo: { type: String, default: '' }
-          , id_aplicacao: { type: String, default: '' }
+          , id_aplicacao_fluxo: { type: String, default: '' }
           , action: { type: String, default: '' }
           , nome: { type: String, default: '' }
           , mapa_site: { type: String, default: '' }
@@ -94,10 +94,6 @@ var Schema = mongoose.Schema
           , link_atual: { type: String, default: '' }
       }]
 
-            //, alcohol: { type: Number, min: 0, default: '' }
-      //, price: { type: Number, min: 0, default: '' }
-      //, category: { type: String, default: ''}
-      //, created_at: { type: Date, default: Date.now() }
     }
   , ModelSchema = new Schema(_schema)
   , Model = mongoose.model('Rotas', ModelSchema)

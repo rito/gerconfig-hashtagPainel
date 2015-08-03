@@ -1,0 +1,132 @@
+db.rotas.insert(
+  {
+      "id_rota": "5698"
+    , "acao": "Migrar"
+    , "rota_principal": true
+    , "rota_pai": ""
+    , "canal": "EA Web"
+    , "sistema": "DI2"
+    , "encapsula_ps": true
+    , "menu_superior_pai": "Serviços Operacionais"
+    , "menu_superior_filho": "Contas"
+    , "menu_nivel1_lateral": "IOF"
+    , "menu_nivel2_lateral": "Isenção/Redução"
+    , "menu_nivel3_lateral": ""
+    , "miolo_aplicacao": ""
+    , "api_categoria": "Conta Corrente"
+    , "api_subcategoria": "Tarifas"
+    , "sigla_pool": "DH5"
+    , "caminho_url": "ContaCorrente/Tarifas/IsencaoReducaoIof"
+    , "menu_aplicacao": "CadastrarReducaoIsencaoIofCCAMmxAcesso1"
+    , "aplicacao": [{
+          "build": 58997
+        , "pacote": 59002
+        , "sigla": "CC"
+        , "stream": "Itau.CL8.CadastrarReducaoIsencaoIofCCAM (SRC)"
+        , "componente": "Itau.CL8.CadastrarReducaoIsencaoIofCCAM_src"
+    }]
+    , "transacao": [{
+          "build": 68112
+        , "pacote": 75273
+        , "sigla": "CC"
+        , "stream": "Itau.CL8.PortalServicos.Aplicacao.Transacao (SRC)"
+        , "componente": "Itau.Aplicacao.Transacao.CC_src"
+    }]
+    , "cmc": [{
+          "svc": "ServicoCadastrarReducaoIsencaoIofCCAM_1.svc"
+        , "dll": "ServicoCadastrarReducaoIsencaoIofCCAM_1.dll"
+        , "xml": "DadosContratoServicoCadastrarReducaoIsencaoIofCCAM_1.xml"
+    }
+    ,{
+          "svc": "ServicoCadastrarReducaoIsencaoIofCCAM_2.svc"
+        , "dll": "ServicoCadastrarReducaoIsencaoIofCCAM_2.dll"
+        , "xml": "DadosContratoServicoCadastrarReducaoIsencaoIofCCAM_2.xml"
+    }]
+    , "catalogo": [{
+          "id": "CadastrarReducaoIsencaoIofCCAMmxAcesso1"
+        , "tipo": "TelaPadrao"
+        , "nome": "CadastrarReducaoIsencaoIofCCAMmxAcesso1"
+        , "classe": "Itau.CL8.CadastrarReducaoIsencaoIofCCA.Controllers.MmxAcesso1Controller, Itau.CL8.CadastrarReducaoIsencaoIofCCAM, Version=1.0.0.0, Culture=neutral"
+        , "valor": ""
+        , "nome_parametro": ""
+        , "valor_parametro": ""
+    }
+    , {
+          "id": "CadastrarReducaoIsencaoIofCCAPaineis"
+        , "tipo": "TelaPadrao"
+        , "nome": "CadastrarReducaoIsencaoIofCCAMPaineis"
+        , "classe": "Itau.CL8.CadastrarReducaoIsencaoIofCCAM.Controllers.CadastrarReducaoIsencaoIofCCAMPaineisController, Itau.CL8.CadastrarReducaoIsencaoIofCCAM, Version=1.0.0.0, Culture=neutral"
+        , "valor": ""
+        , "nome_parametro": ""
+        , "valor_parametro": ""
+    }]
+    , "gerenciador_mensagem": [{
+          "nome": "Itau.CMC.CadastrarReducaoIsencaoIofCCAM_1.EnvioLogico.Went"
+        , "transacao": "CCAM"
+        , "conector": "CMC"
+        , "caminho_url": "Contratos/ServicoCadastrarReducaoIsencaoIofCCAM_1.svc"
+    }
+    , {
+          "nome": "Itau.CMC.CadastrarReducaoIsencaoIofCCAM_2.EnvioLogico.WentPasso1e2"
+        , "transacao": "CCAM"
+        , "conector": "CMC"
+        , "caminho_url": "Contratos/ServicoCadastrarReducaoIsencaoIofCCAM_2.svc"
+    }]
+    , "ajuda": [{
+          "tipo": ""
+        , "id": ""
+        , "nome": ""
+        , "linha": ""
+        , "dados": ""
+    }]
+    , "navegacao": [{
+          "id_aplicacao": "CadastrarReducaoIsencaoIofCCAMmxAcesso1"
+        , "nome": ""
+        , "grupo_mapa_site": ""
+        , "subgrupo1_mapa_site": ""
+        , "fluxo": "1"
+        , "id_aplicacao_fluxo": "CadastrarReducaoIsencaoIofCCAMmxAcesso1"
+        , "action": "Index"
+        , "nome": ""
+        , "mapa_site": "true"
+        , "desc_mapa_site": ""
+        , "bread_crumb": "true"
+        , "desc_bread_crumb": ""
+        , "pos_bread_crumb": "2"
+        , "link_atual": "true"
+    }
+    , {
+          "id_aplicacao": "CadastrarReducaoIsencaoIofCCAMmxAcesso1"
+        , "nome": ""
+        , "grupo_mapa_site": ""
+        , "subgrupo1_mapa_site": ""
+        , "fluxo": "2"
+        , "id_aplicacao_fluxo": "CadastrarReducaoIsencaoIofCCAMPaineis"
+        , "action": "CCAMPSA"
+        , "nome": ""
+        , "mapa_site": "true"
+        , "desc_mapa_site": ""
+        , "bread_crumb": "true"
+        , "desc_bread_crumb": ""
+        , "pos_bread_crumb": "2"
+        , "link_atual": "true"
+    }
+    , {
+          "id_aplicacao": "CadastrarReducaoIsencaoIofCCAMmxAcesso1"
+        , "nome": ""
+        , "grupo_mapa_site": ""
+        , "subgrupo1_mapa_site": ""
+        , "fluxo": "3"
+        , "id_aplicacao_fluxo": "CadastrarReducaoIsencaoIofCCAMPaineis"
+        , "action": "Mensagem Informativa"
+        , "nome": ""
+        , "mapa_site": "true"
+        , "desc_mapa_site": ""
+        , "bread_crumb": "true"
+        , "desc_bread_crumb": ""
+        , "pos_bread_crumb": "2"
+        , "link_atual": "true"
+    }]
+
+  }
+  );

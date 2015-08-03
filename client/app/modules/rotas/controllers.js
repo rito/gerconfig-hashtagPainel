@@ -5,6 +5,7 @@ angular.module('myApp.Rotas.Controllers', [])
 .controller('RotasCreateController', RotasCreateController)
 .controller('RotasGetController', RotasGetController)
 .controller('RotasEditController', RotasEditController)
+.controller('RotasGerarCatalogoController', RotasGerarCatalogoController)
 ;
 
 // Controllers
@@ -52,6 +53,32 @@ function RotasListController($scope, $http) {
     }
   }
 };
+
+
+function RotasGerarCatalogoController($scope, $http) {
+  var httpRequest = {
+        url: 'http://localhost:3000/api/rotas/gerarCatalogo'
+      , method: 'GET'
+      }
+    ;
+
+  $http(httpRequest)
+  .success(function(data) {
+    console.log('SUCESSO: ', data);
+    $scope.rotas = data;
+    $scope.msg = 'Listagem feita com sucesso.';
+  })
+  .error(function(err) {
+    console.log('ERRO: ', err);
+    $scope.msg = 'Listagem não podde ser feita.';
+
+  });
+
+
+};
+
+
+
 
 function RotasGetController($scope, $http, $routeParams) {
   var httpRequest = {
@@ -139,6 +166,7 @@ function RotasEditController($scope, $http, $routeParams) {
 
 // Injeção de dependências
 RotasListController.$inject = ['$scope', '$http'];
+RotasGerarCatalogoController.$inject = ['$scope', '$http'];
 RotasCreateController.$inject = ['$scope', '$http'];
 RotasGetController.$inject = ['$scope', '$http', '$routeParams'];
 RotasEditController.$inject = ['$scope', '$http', '$routeParams'];
