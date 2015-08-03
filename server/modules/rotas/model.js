@@ -24,6 +24,7 @@ var Schema = mongoose.Schema
       , canal: { type: String, default: '' }
       , sistema: { type: String, default: '' }
       , encapsula_ps: { type: Boolean, default: 'true'}
+      , menu_aplicacao: { type: String, default: '' }
       , menu_superior_pai: { type: String, default: '' }
       , menu_superior_filho: { type: String, default: '' }
       , menu_nivel1_lateral: { type: String, default: '' }
@@ -35,8 +36,65 @@ var Schema = mongoose.Schema
       , sigla_pool: { type: String, default: '' }
       , caminho_url: { type: String, default: '' }
       , created_at: { type: Date, default: Date.now() }
+      , aplicacao: [{
+            build: { type: String, default: '' }
+          , pacote: { type: String, default: '' }
+          , sigla: { type: String, default: '' }
+          , stream: { type: String, default: '' }
+          , componente: { type: String, default: '' }
+      }]
+      , transacao: [{
+            build: { type: String, default: '' }
+          , pacote: { type: String, default: '' }
+          , sigla: { type: String, default: '' }
+          , stream: { type: String, default: '' }
+          , componente: { type: String, default: '' }
+      }]
+      , cmc: [{
+            svc: { type: String, default: '' }
+          , dll: { type: String, default: '' }
+          , xml: { type: String, default: '' }
+      }]
+      , catalogo: [{
+            id: { type: String, default: '' }
+          , tipo: { type: String, default: '' }
+          , nome: { type: String, default: '' }
+          , classe: { type: String, default: '' }
+          , valor: { type: String, default: '' }
+          , nome_parametro: { type: String, default: '' }
+          , valor_parametro: { type: String, default: '' }
+      }]
+      , gerenciador_mensagem: [{
+            nome: { type: String, default: '' }
+          , transacao: { type: String, default: '' }
+          , conector: { type: String, default: '' }
+          , caminho_url: { type: String, default: '' }
+      }]
+      , ajuda: [{
+            tipo: { type: String, default: '' }
+          , id: { type: String, default: '' }
+          , nome: { type: String, default: '' }
+          , linha: { type: String, default: '' }
+          , dados: { type: String, default: '' }
+      }]
+      , navegacao: [{
+            id_aplicacao: { type: String, default: '' }
+          , nome: { type: String, default: '' }
+          , grupo_mapa_site: { type: String, default: '' }
+          , subgrupo1_mapa_site: { type: String, default: '' }
+          , fluxo: { type: String, default: '' }
+          , id_aplicacao: { type: String, default: '' }
+          , action: { type: String, default: '' }
+          , nome: { type: String, default: '' }
+          , mapa_site: { type: String, default: '' }
+          , desc_mapa_site: { type: String, default: '' }
+          , bread_crumb: { type: String, default: '' }
+          , desc_bread_crumb: { type: String, default: '' }
+          , pos_bread_crumb: { type: String, default: '' }
+          , link_atual: { type: String, default: '' }
+      }]
 
-      //, alcohol: { type: Number, min: 0, default: '' }
+            //, alcohol: { type: Number, min: 0, default: '' }
       //, price: { type: Number, min: 0, default: '' }
       //, category: { type: String, default: ''}
       //, created_at: { type: Date, default: Date.now() }

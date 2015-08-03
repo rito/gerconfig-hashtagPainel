@@ -23,6 +23,12 @@
     <label for="">
       <span class="form-label-text">Rota Principal</span>
       <input type="text" data-ng-model="rota.rota_principal" />
+
+      <select data-ng-model="rota.rota_principal">
+        <option value="true" ng-selected="rota.rota_principal=='true'">SIM</option>
+        <option value="false" ng-selected="rota.rota_principal=='false'">NÃO</option>
+      </select>
+
     </label>
   </div>
 
@@ -49,7 +55,20 @@
   <div class="form-group">
     <label for="">
       <span class="form-label-text">Encapsula PS </span>
-      <input type="text" data-ng-model="rota.encapsula_ps" />
+      <!-- <input type="text" data-ng-model="rota.encapsula_ps" /> -->
+      <select data-ng-model="rota.encapsula_ps">
+        <option value="true">SIM</option>
+        <option value="false" ng-selected="rota.encapsula_ps=='false'">NÃO</option>
+      </select>
+
+
+      <select name="encapsula_ps" id="encapsula_ps" class="customSelect full" data-ng-model="rota.encapsula_ps">
+        <option value="">Selecione</option>
+        <option value="true" selected="true">Sim</option>
+        <option value="false">Não</option>
+      </select>
+
+
     </label>
   </div>
   <div class="form-group">
