@@ -1,0 +1,67 @@
+<h2> Menus</h2>
+<p class="msg">
+  {{ msg }}
+</p>
+
+<form name="rotaForm">
+
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Edição de Menu</span>
+      {{menu.menu}}
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Nível do Menu (1,2,3 ou 4)</span>
+      {{menu.nivel_menu}}
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Menu Pai (Baseado no Nível)</span>
+      {{menu.menu_pai}}
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Ordem</span>
+      {{menu.ordem_menu}}
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Aplicação</span>
+      {{menu.aplicacao}}
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Filtro </span>
+      {{menu.filtro}}
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Atalho </span>
+      {{menu.atalho}}
+    </label>
+  </div>
+
+  <hr align="left" size="5}}
+
+  <div class="form-group">
+    <a class="btn btn-large" href="#/menus/{{menu._id}}/edit">Editar</a>
+
+  </div>
+  <div class="form-group">
+    <p class="msg">
+      {{ msg }}
+    </p>
+  </div>
+</form>

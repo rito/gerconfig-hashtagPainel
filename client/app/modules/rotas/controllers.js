@@ -77,6 +77,28 @@ function RotasGerarCatalogoController($scope, $http) {
 
 };
 
+function RotasGerarMenuConfigController($scope, $http) {
+  var httpRequest = {
+        url: 'http://localhost:3000/api/rotas/gerarMenuConfig'
+      , method: 'GET'
+      }
+    ;
+
+  $http(httpRequest)
+  .success(function(data) {
+    console.log('SUCESSO: ', data);
+    $scope.rotas = data;
+    $scope.msg = 'Listagem feita com sucesso.';
+  })
+  .error(function(err) {
+    console.log('ERRO: ', err);
+    $scope.msg = 'Listagem não podde ser feita.';
+
+  });
+
+
+};
+
 
 
 
@@ -167,6 +189,8 @@ function RotasEditController($scope, $http, $routeParams) {
 // Injeção de dependências
 RotasListController.$inject = ['$scope', '$http'];
 RotasGerarCatalogoController.$inject = ['$scope', '$http'];
+RotasGerarMenuConfigController.$inject = ['$scope', '$http'];
+
 RotasCreateController.$inject = ['$scope', '$http'];
 RotasGetController.$inject = ['$scope', '$http', '$routeParams'];
 RotasEditController.$inject = ['$scope', '$http', '$routeParams'];

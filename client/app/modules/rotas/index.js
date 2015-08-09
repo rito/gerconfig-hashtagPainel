@@ -18,6 +18,10 @@ function rotasConfig($routeProvider){
       templateUrl: 'modules/rotas/views/gerarCatalogo.html',
       controller: 'RotasGerarCatalogoController'
     })
+    .when('/rotas/gerarMenuConfig', {
+      templateUrl: 'modules/rotas/views/gerarMenuConfig.html',
+      controller: 'RotasGerarMenuConfigController'
+    })    
     .when('/rotas/:id', {
       templateUrl: 'modules/rotas/views/get.html',
       controller: 'RotasGetController'

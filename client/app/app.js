@@ -7,6 +7,7 @@ angular.module('myApp', [
   'myApp.view2',
   'myApp.version',
   'myApp.Rotas',
+  'myApp.Menus',  
   'myApp.Beers'
 ]).
 config(['$routeProvider', function($routeProvider) {

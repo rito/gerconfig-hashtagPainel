@@ -1,0 +1,32 @@
+<h2>Listagem Menus - Ambiente de Homologação</h2>
+
+<p class="msg">
+  {{ msg }}
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Menu</th>
+      <th>Menu Pai</th>
+      <th>Nível do Menu</th>
+      <th>Ordem do Menu</th>
+      <th>Aplicação</th>
+      <th>Filtro</th>
+      <th>Atalho</th>
+      <th> EXCLUIR </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-ng-repeat='menu in menus'>
+      <td><a href="#/menus/{{menu._id}}">{{menu.menu}}</a></td>
+      <td>{{ menu.menu_pai }}</td>
+      <td>{{ menu.nivel_menu }}</td>
+      <td>{{ menu.ordem_menu }}</td>
+      <td>{{ menu.aplicacao }}</td>
+      <td>{{ menu.filtro }}</td>
+      <td>{{ menu.atalho }}</td>
+      <td><a data-ng-click="remove(rota)">EXCLUIR</a></td>
+    </tr>
+  </tbody>
+</table>

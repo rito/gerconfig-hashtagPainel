@@ -1,0 +1,66 @@
+<h2>Cadastro de Menus</h2>
+<p class="msg">
+  {{ msg }}
+</p>
+
+<form name="rotaForm">
+
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Menu</span>
+      <input type="text" data-ng-model="menu.menu" />
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Nível do Menu (1,2,3 ou 4)</span>
+      <input type="text" data-ng-model="menu.nivel_menu" />
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Menu Pai (Baseado no Nível)</span>
+      <input type="text" data-ng-model="menu.menu_pai" />
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Ordem</span>
+      <input type="text" data-ng-model="menu.ordem_menu" />
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Aplicação</span>
+      <input type="text" data-ng-model="menu.aplicacao" />
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Filtro </span>
+      <input type="text" data-ng-model="menu.filtro" />
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="">
+      <span class="form-label-text">Atalho </span>
+      <input type="text" data-ng-model="menu.atalho" />
+    </label>
+  </div>
+
+  <hr align="left" size="5" />
+
+  <div class="form-group">
+    <button class="btn btn-large" data-ng-click="create(menu)">Incluir</button>
+  </div>
+  <div class="form-group">
+    <p class="msg">
+      {{ msg }}
+    </p>
+  </div>
+</form>

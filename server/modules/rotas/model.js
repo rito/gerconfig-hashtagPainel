@@ -25,11 +25,13 @@ var Schema = mongoose.Schema
       , sistema: { type: String, default: '' }
       , encapsula_ps: { type: Boolean, default: 'true'}
       , menu_aplicacao: { type: String, default: '' }
-      , menu_superior_pai: { type: String, default: '' }
-      , menu_superior_filho: { type: String, default: '' }
-      , menu_nivel1_lateral: { type: String, default: '' }
-      , menu_nivel2_lateral: { type: String, default: '' }
-      , menu_nivel3_lateral: { type: String, default: '' }
+      , atalho: { type: String, default: '' }
+      , menu_pai: { type: String, default: '' }
+      //, menu_superior_pai: { type: String, default: '' }
+      //, menu_superior_filho: { type: String, default: '' }
+      //, menu_nivel1_lateral: { type: String, default: '' }
+      //, menu_nivel2_lateral: { type: String, default: '' }
+      , menu_lateral_ordem: { type: String, default: '' }
       , miolo_aplicacao: { type: String, default: '' }
       , api_categoria: { type: String, default: '' }
       , api_subcategoria: { type: String, default: '' }

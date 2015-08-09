@@ -1,0 +1,52 @@
+<h2>Listagem rotas - Ambiente de Homologação</h2>
+
+<p class="msg">
+  {{ msg }}
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID Da Rota</th>
+      <th>Ação</th>
+      <th>Rota Principal</th>
+      <th>Rota Pai</th>
+      <th>Canal</th>
+      <th>Sistema</th>
+      <th>Encapsula PS</th>
+      <th>Menu Superior 1</th>
+      <th>Menu Superior 2</th>
+      <th>Menu Lateral 1</th>
+      <th>Menu Lateral 2</th>
+      <th>Menu Lateral 3</th>
+      <th>Miolo</th>
+      <th>API Categoria</th>
+      <th>API SubCategoria</th>
+      <th>Sigla Pool</th>
+      <th>Caminho URL</th>
+      <th> EXCLUIR </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-ng-repeat='rota in rotas'>
+      <td>{{beer.name}}<a href="#/rotas/{{rota._id}}">{{rota.id_rota}}</a></td>
+      <td>{{ rota.acao }}</td>
+      <td>{{ rota.rota_principal }}</td>
+      <td>{{ rota.rota_pai }}</td>
+      <td>{{ rota.canal }}</td>
+      <td>{{ rota.sistema }}</td>
+      <td>{{ rota.encapsula_ps }}</td>
+      <td>{{ rota.menuSuperior_pai }}</td>
+      <td>{{ rota.menuSuperior_filho }}</td>
+      <td>{{ rota.menu_nivel1_lateral }}</td>
+      <td>{{ rota.menu_nivel2_lateral }}</td>
+      <td>{{ rota.menu_nivel3_lateral }}</td>
+      <td>{{ rota.miolo_aplicacao }}</td>
+      <td>{{ rota.api_categoria }}</td>
+      <td>{{ rota.api_subcategoria }}</td>
+      <td>{{ rota.sigla_pool }}</td>
+      <td>{{ rota.caminho_url }}</td>
+      <td><a data-ng-click="remove(rota)">EXCLUIR</a></td>
+    </tr>
+  </tbody>
+</table>

@@ -42,9 +42,12 @@ app.use('/api/beers', api.beers);
 api.rotas = require('./modules/rotas/routes/api');
 app.use('/api/rotas', api.rotas);
 
+api.menus = require('./modules/menus/routes/api');
+app.use('/api/menus', api.menus);
 
 app.use('/beers', require('./modules/beers/routes'));
 app.use('/rotas', require('./modules/rotas/routes'));
+app.use('/menus', require('./modules/menus/routes'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,11 +1,12 @@
-var Model = require('./model')
+var ModelMenus = require('./model')
+var ModelRotas = require('../rotas/model')
   , msg = ''
   , rotas = ''
   , conteudoCatalogo = ''
   , Controller = {
       create: function(req, res) {
         var dados = req.body
-          , model = new Model(dados);
+          , model = new ModelMenus(dados);
         model.save(function (err, data) {
           if (err){
             console.log('Erro: ', err);
@@ -20,7 +21,7 @@ var Model = require('./model')
       }
     , retrieve: function(req, res) {
       var query = {};
-        Model.find(query, function (err, data) {
+        ModelMenus.find(query, function (err, data) {
           if (err){
             console.log('Erro: ', err);
             msg = err;
@@ -30,11 +31,11 @@ var Model = require('./model')
             msg = data;
           }
           res.json(msg);
-        });
+        }).sort({"nivel_menu": 1, "ordem_menu": 1 });
       }
     , get: function(req, res) {
         var query = {_id: req.params.id};
-        Model.findOne(query, function (err, data) {
+        ModelMenus.findOne(query, function (err, data) {
           if (err){
             console.log('Erro: ', err);
             msg = err;
@@ -50,7 +51,7 @@ var Model = require('./model')
         var query = {_id: req.params.id}
           , mod = req.body;
 
-        Model.update(query, mod, function (err, data) {
+        ModelMenus.update(query, mod, function (err, data) {
           if (err){
             console.log('Erro: ', err);
             msg = err;
@@ -65,7 +66,7 @@ var Model = require('./model')
     , delete: function(req, res) {
         var query = {_id: req.params.id};
 
-        Model.remove(query, function (err, data) {
+        ModelMenus.remove(query, function (err, data) {
           if (err){
             console.log('Erro: ', err);
             msg = err;
@@ -79,7 +80,7 @@ var Model = require('./model')
       }
     , renderList: function(req, res) {
       var query = {};
-        Model.find(query, function (err, data) {
+        ModelMenus.find(query, function (err, data) {
           if (err){
             console.log('Erro: ', err);
             res.render('error', err);
@@ -92,7 +93,7 @@ var Model = require('./model')
       }
     , renderGet: function(req, res) {
         var query = {_id: req.params.id};
-        Model.findOne(query, function (err, data) {
+        ModelMenus.findOne(query, function (err, data) {
           if (err){
             console.log('Erro: ', err);
             res.render('error', err);
@@ -105,7 +106,7 @@ var Model = require('./model')
       }
     , renderEdit: function(req, res) {
         var query = {_id: req.params.id};
-        Model.findOne(query, function (err, data) {
+        ModelMenus.findOne(query, function (err, data) {
           if (err){
             console.log('Erro: ', err);
             res.render('error', err);
@@ -119,9 +120,9 @@ var Model = require('./model')
     , renderCreate: function(req, res) {
         res.render('create');
       }
-    , gerarCatalogo: function(req, res) {
+    , gerarMenuConfig: function(req, res) {
       var query = {};
-        Model.find(query, function (err, data) {
+        ModelMenus.find(query, function (err, data) {
           if (err){
             console.log('Erro: ', err);
             msg = err;
@@ -131,7 +132,10 @@ var Model = require('./model')
 
             console.log('Pesquisa feita com sucesso:', data);
             console.log('Iniciando geração do Catalogo.xml...');
-            rotas = data;
+            menus = data;
+
+
+
             //Iniciando construção do xml
             var fs = require('fs');
             var geradorXML = require('xml-writer');
@@ -139,21 +143,21 @@ var Model = require('./model')
             var catalogoXML = new geradorXML(true);
 
             //catalogoXML.startDocument();
-            catalogoXML.startElement('catalogo');
-              catalogoXML.writeComment('Inicio das Aplicacoes Base');
+            catalogoXML.startElement('menu');
+              catalogoXML.startElement('itens');
+              //catalogoXML.writeComment('Inicio das Aplicacoes Base');
 
-
-
-              rotas.forEach(function(value) {
-                console.log('Criando rota... ' + value.id_rota);
+              menus.forEach(function(value) {
+                console.log('Criando rota... ' + value.menu);
 
                 conteudoCatalogo = value.catalogo;
 
                 conteudoCatalogo.forEach(function(conteudo) {
 
-                catalogoXML.startElement('aplicacao')
-                  .writeAttribute('id', value.id_rota)
-                  .writeAttribute('tipo', conteudo.id)
+                catalogoXML.startElement('item')
+                  .writeAttribute('nome', value.menu)
+                  //continuar daqui
+                  //.writeAttribute('tipo', cont)
                   .writeAttribute('nome', 'Ajuda');
                   catalogoXML.startElement('controles')
                     catalogoXML.startElement('controle')
@@ -196,7 +200,7 @@ var Model = require('./model')
             msg = data;
           }
           res.json(msg);
-        });
+        }).sort({"nivel_menu": 1, "ordem_menu": 1 });
       }
 
 
